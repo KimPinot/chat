@@ -1,21 +1,15 @@
 "use client";
 
-import { io } from "socket.io-client";
-import useAsyncEffect from "use-async-effect";
+import { useEffect } from "react";
 
-const handler = async () => {
-  await fetch("/api/socket");
-  const socket = io();
-  return socket;
-};
+import { useSocketProvider } from "providers/SocketProvider";
 
 export default function Home() {
-  useAsyncEffect(async () => {
-    const socket = await handler();
-    socket.on("connect", () => {
-      console.log("connected");
-    });
-  }, []);
+  const socket = useSocketProvider();
+
+  useEffect(() => {
+    socket?.on("connect", () => console.log("connected"));
+  }, [socket]);
 
   return <h1>Hello World!</h1>;
 }
