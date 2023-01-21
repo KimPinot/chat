@@ -25,7 +25,10 @@
     "react-dom": "^18.2.0",
     "react-error-boundary": "^3.1.4",
     "react-toastify": "^9.1.1",
-    "superjson": "^1.9.1"
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4",
+    "superjson": "^1.9.1",
+    "use-async-effect": "^2.2.7"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.7",

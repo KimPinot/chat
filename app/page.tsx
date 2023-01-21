@@ -1,8 +1,21 @@
+"use client";
+
+import { io } from "socket.io-client";
+import useAsyncEffect from "use-async-effect";
+
+const handler = async () => {
+  await fetch("/api/socket");
+  const socket = io();
+  return socket;
+};
+
 export default function Home() {
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <h1>Hello Template</h1>
-      <p>this is just template project</p>
-    </div>
-  );
+  useAsyncEffect(async () => {
+    const socket = await handler();
+    socket.on("connect", () => {
+      console.log("connected");
+    });
+  }, []);
+
+  return <h1>Hello World!</h1>;
 }
