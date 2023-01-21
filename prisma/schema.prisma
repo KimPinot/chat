@@ -20,4 +20,16 @@ model Message {
   content   String
   author    String
   createdAt DateTime @default(now())
+  room      Room?    @relation(fields: [roomId], references: [id])
+  roomId    String?
+
+  @@map("messages")
+}
+
+model Room {
+  id        String    @id
+  createdAt DateTime  @default(now())
+  messages  Message[]
+
+  @@map("rooms")
 }
