@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended",
+    "plugin:import/typescript",
+    "plugin:import/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": "warn",
+    "import/newline-after-import": "warn",
+    "tailwindcss/no-custom-classname": "off",
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
+}
