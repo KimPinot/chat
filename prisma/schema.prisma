@@ -14,3 +14,10 @@ model database {
   id        Int     @id @default(autoincrement())
   initlized Boolean @default(true)
 }
+
+model Message {
+  id        Int      @id @default(autoincrement())
+  content   String
+  author    String
+  createdAt DateTime @default(now())
+}
