@@ -1776,9 +1776,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^2.13.6":
-  version: 2.24.0
-  resolution: "daisyui@npm:2.24.0"
+"daisyui@npm:^2.47.0":
+  version: 2.47.0
+  resolution: "daisyui@npm:2.47.0"
   dependencies:
     color: ^4.2
     css-selector-tokenizer: ^0.8.0
@@ -1787,7 +1787,7 @@ __metadata:
   peerDependencies:
     autoprefixer: ^10.0.2
     postcss: ^8.1.6
-  checksum: 3fdccfe11b3275849d98f0701872af092aa563c2a2f554e6ecab09f4c7e29ae1df6afd7db4f8e7c6d1e868120be0f90bb92fcc9e63937d55cf8fb4435878e744
+  checksum: a901337f5ef8abfe02062bdd0571a1352fd384569605d535f4e930bfcfff09c0b7594f7d89c1cc94deb79dc47049b5c89555cabc07a9d26ab493efa84fa76342
   languageName: node
   linkType: hard
 
@@ -4227,7 +4227,7 @@ __metadata:
     axios: ^0.26.1
     classcat: ^5.0.3
     cookies-next: ^2.0.4
-    daisyui: ^2.13.6
+    daisyui: ^2.47.0
     date-fns: ^2.28.0
     dotenv-cli: ^6.0.0
     eslint: ^8.12.0
